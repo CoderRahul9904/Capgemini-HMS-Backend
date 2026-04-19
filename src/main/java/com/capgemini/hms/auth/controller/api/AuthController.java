@@ -1,4 +1,4 @@
-package com.capgemini.hms.auth.controller;
+package com.capgemini.hms.auth.controller.api;
 
 import com.capgemini.hms.auth.entity.ERole;
 import com.capgemini.hms.auth.entity.Role;

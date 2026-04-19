@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: capgemini-hms-backend
+    env: java
+    plan: free
+    buildCommand: chmod +x mvnw && ./mvnw clean install -DskipTests
+    startCommand: java -jar target/hms-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: ACTIVE_DB
+        value: neon
+      - key: NEON_URL
+        sync: false
+      - key: NEON_USERNAME
+        sync: false
+      - key: NEON_PASSWORD
+        sync: false
+      - key: JAVA_VERSION
+        value: 17
+    healthCheckPath: /actuator/health
